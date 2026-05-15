@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Mercadoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+    <main>
+        <section class="cadastro">
+            <h1>Cadastro de itens</h1>
+            <hr>
+            <form id="form-produto">
+
+                <div class="nome-produto">
+                    <div class="bloco">
+                        <label for="nome_produto">Nome do produto</label>
+                        <input type="text" placeholder="nome do produto" id="nome_produto" required>
+                    </div>
+
+                    <div class="bloco">
+                        <label for="valor">R$</label>
+                        <input type="number" placeholder="valor em reais" id="valor" step="0.01" requered>
+                    </div>
+
+                    <div class="bloco">
+                        <label for="und">Unidade de medida</label>
+                        <input type="text" placeholder="Ex: und, kg, gramas" id="und" requered>
+                    </div>
+
+                    <div class="bloco">
+                        <label for="qtnd">Quantidade</label>
+                        <input type="number" placeholder="" id="qtnd" step="0.01" requered>
+                    </div>
+
+
+                    <div class="button-enviar">
+                        <button type="submit">Salva</button>
+                    </div>
+                </div>
+
+            </form>
+            <hr>
+            
+            <form id="apagar-produto">
+                <h2>Apagar item</h2>
+                <div class="nome-produto">
+                    <div class="bloco">
+                        <label for="qtnd">Nome do item:</label>
+                        <input type="text" placeholder="DIgite o nome do produto" id="apagar-item" requered>
+                    </div>
+
+                    <div class="button-enviar">
+                        <button type="submit">Apagar</button>
+                    </div>
+                </div>
+
+                <hr>
+            </form>
+        </section>
+
+        <section class="tabela-itens">
+            <h1>Produtos cadastrado</h1>
+            <hr>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Unidade</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabela-produtos">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="salvar-produtos.js"></script>
+</body>
+</html>
